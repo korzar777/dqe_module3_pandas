@@ -29,6 +29,6 @@ except CellExecutionError:
     print(msg)
     raise
 finally:
-    with open('executed_{}'.format(notebook_filename_out), 'w', encoding='UTF-8') as f:
+    with open(notebook_filename_out, 'w', encoding='UTF-8') as f:
         nbformat.write(nb_in, f)
         print('Executed notebook saved as {}'.format(notebook_filename_out))
